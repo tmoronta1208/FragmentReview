@@ -40,6 +40,9 @@ public class MainFragment extends Fragment {
                 String input = editText.getText().toString();
                 bundle.putString("main", input);
                 nextFragment.setArguments(bundle);
+                fragmentTransaction.setCustomAnimations(R.anim.enter, R.anim.exit, R.anim.pop_enter, R.anim.pop_exit);
+
+
                 fragmentTransaction.replace(R.id.frag_container, nextFragment);
                 fragmentTransaction.addToBackStack("next");
                 fragmentTransaction.commit();
