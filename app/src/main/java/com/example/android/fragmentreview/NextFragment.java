@@ -3,6 +3,7 @@ package com.example.android.fragmentreview;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -18,6 +19,8 @@ public class NextFragment extends Fragment {
 
     View rootview;
     TextView textView;
+    private String str;
+
 
     public NextFragment() {
         // Required empty public constructor
@@ -32,8 +35,14 @@ public class NextFragment extends Fragment {
 
         Bundle bundle = getArguments();
 
-        String stringInput = bundle.getString("main", "");
-        textView.setText(stringInput);
+        String stringInput = bundle.getString("key", "");
+
+
+        CheckingInput checkingInput = new CheckingInput();
+        str=  checkingInput.editTextString(stringInput);
+
+        Log.d("str value", str);
+        textView.setText(str);
         return rootview;
     }
 

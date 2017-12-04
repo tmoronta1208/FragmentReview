@@ -1,6 +1,6 @@
 <resources>
     <string name="app_name">FragmentReview</string>
-
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="hello">Hello blank fragment</string>
+    <string name="hi">hi There or hi everyone</string>
+    <string name="bye">byebye</string>
 </resources>
